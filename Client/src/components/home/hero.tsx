@@ -1,5 +1,5 @@
 import { FastForwardIcon } from "lucide-react";
-import logo from "../../assets/images/logonavhero.png";
+import banner from "../../assets/images/banner.png";
 import video from "../../assets/videos/w1-launch-film-v2-9x16.mp4";
 
 import { Button } from "../ui/button";
@@ -25,15 +25,13 @@ function Hero() {
 
       {/* Centered Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4">
-        <img src={logo} />
-        {/* Heading */}
-        <h1 className="text- gold text-4xl md:text-6xl tracking-wide text-center mb-10 racing">
-          With Every Mile, We Make You Smile
-        </h1>
-
+        <img src={banner} onClick={() => {
+              navigate("/cars");
+            }}/>
+       
         <div className="flex justify-center items-center text- gold bg-black">
           <Button
-            className="flex justify-center border items-center text-md gap-2 mont"
+            className="flex justify-center border items-center text-md gap-3 mont"
             onClick={() => {
               navigate("/cars");
             }}
